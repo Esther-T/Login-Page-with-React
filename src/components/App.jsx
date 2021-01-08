@@ -4,11 +4,11 @@ import Login from "./Login.jsx";
 var isLoggedIn = false;
 
 function App() {
-  if (isLoggedIn === true) {
-    return <h1>Hello</h1>;
-  } else {
-    return <Login />;
-  }
+  return (
+    <div className="container">
+      {isLoggedIn === true ? <h1>Hello</h1> : <Login />}
+    </div>
+  );
 }
 
 export default App;
