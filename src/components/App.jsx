@@ -2,8 +2,8 @@ import React from "react";
 import Login from "./Login.jsx";
 import Form from "./Form.jsx";
 
-var isLoggedIn = false;
-var userIsRegistered = true;
+var isLoggedIn = false; // check if user is logged in
+var userIsRegistered = true; // if user is registered
 
 var currentTime = new Date().getHours();
 console.log(currentTime);
