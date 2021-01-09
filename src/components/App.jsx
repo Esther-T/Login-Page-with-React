@@ -2,6 +2,8 @@ import React from "react";
 import Login from "./Login.jsx";
 
 var isLoggedIn = false;
+var userIsRegistered = false;
+
 var currentTime = new Date().getHours();
 console.log(currentTime);
 function App() {
