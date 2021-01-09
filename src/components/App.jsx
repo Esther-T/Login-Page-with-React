@@ -1,5 +1,6 @@
 import React from "react";
 import Login from "./Login.jsx";
+import Form from "./Form.jsx";
 
 var isLoggedIn = false;
 var userIsRegistered = false;
@@ -9,8 +10,7 @@ console.log(currentTime);
 function App() {
   return (
     <div className="container">
-      {isLoggedIn ? <h1>Hello</h1> : <Login />}
-      {currentTime > 24 ? <h3>Why are you still working?</h3> : null}
+      {userIsRegistered ? <Form /> : isLoggedIn ? <h1>Hello</h1> : <Login />}
     </div>
   );
 }
