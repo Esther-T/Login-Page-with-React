@@ -8,8 +8,15 @@ var userIsRegistered = true; // if user is registered
 var currentTime = new Date().getHours();
 console.log(currentTime);
 function App() {
+  const [currTime, newTime] = React.useState(new Date().getTime());
+
+  function getTime() {
+    newTime(new Date().getTime());
+  }
   return (
     <div className="container">
+      <h2>{currTime}</h2>
+      <button onClick={getTime}>Get Time</button>
       {!userIsRegistered ? <Form /> : isLoggedIn ? <h1>Hello</h1> : <Login />}
     </div>
   );
