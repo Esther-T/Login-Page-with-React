@@ -3,7 +3,7 @@ import Login from "./Login.jsx";
 import Form from "./Form.jsx";
 
 var isLoggedIn = false; // check if user is logged in
-var userIsRegistered = true; // if user is registered
+var userIsRegistered = false; // if user is registered
 
 function App() {
   const [currTime, newTime] = React.useState(new Date().toLocaleTimeString());
