@@ -5,13 +5,11 @@ import Form from "./Form.jsx";
 var isLoggedIn = false; // check if user is logged in
 var userIsRegistered = true; // if user is registered
 
-var currentTime = new Date().getHours();
-console.log(currentTime);
 function App() {
-  const [currTime, newTime] = React.useState(new Date().getTime());
+  const [currTime, newTime] = React.useState(new Date().toLocaleTimeString());
 
   function getTime() {
-    newTime(new Date().getTime());
+    newTime(new Date().toLocaleTimeString());
   }
   return (
     <div className="container">
