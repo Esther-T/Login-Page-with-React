@@ -10,10 +10,15 @@ function Form() {
 
   return (
     <form className="form">
-      <input type="text" placeholder="Username" />
+      <input type="text" placeholder="Username" required />
       <font id="passMessage" color="red"></font>
-      <input onChange={checkPassword} type="password" placeholder="Password" />
-      <input type="password" placeholder="Confirm Password" />
+      <input
+        onChange={checkPassword}
+        type="password"
+        placeholder="Password"
+        required
+      />
+      <input type="password" placeholder="Confirm Password" required />
       <button type="submit">Register</button>
     </form>
   );
