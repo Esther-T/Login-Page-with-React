@@ -1,8 +1,8 @@
 import React from "react";
 
-function Form(event) {
-  function checkPassword() {
-    event.target.value < 5
+function Form() {
+  function checkPassword(event) {
+    event.target.value.length < 5
       ? console.log("password too short")
       : console.log("password allowed");
   }
@@ -10,7 +10,7 @@ function Form(event) {
   return (
     <form className="form">
       <input type="text" placeholder="Username" />
-      <input type="password" onChanged={checkPassword} placeholder="Password" />
+      <input onChange={checkPassword} type="password" placeholder="Password" />
       <input type="password" placeholder="Confirm Password" />
       <button type="submit">Register</button>
     </form>
