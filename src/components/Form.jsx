@@ -8,6 +8,14 @@ function Form() {
       : (document.getElementById("passMessage").innerHTML = "");
   }
 
+  function confirmPassword(event) {
+    const pass = document.getElementById("password").value;
+    event.target.value.length !== pass
+      ? (document.getElementById("passMessage").innerHTML =
+          "Password not the same!")
+      : (document.getElementById("passMessage").innerHTML = "");
+  }
+
   return (
     <form className="form">
       <input type="text" placeholder="Username" required />
@@ -18,7 +26,13 @@ function Form() {
         placeholder="Password"
         required
       />
-      <input type="password" placeholder="Confirm Password" required />
+      <input
+        type="password"
+        id="password"
+        onChange={confirmPassword}
+        placeholder="Confirm Password"
+        required
+      />
       <button type="submit">Register</button>
     </form>
   );
