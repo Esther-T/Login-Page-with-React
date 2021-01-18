@@ -3,13 +3,15 @@ import React from "react";
 function Form() {
   function checkPassword(event) {
     event.target.value.length < 5
-      ? console.log("password too short")
-      : console.log("password allowed");
+      ? (document.getElementById("passMessage").innerHTML =
+          "Password needs to be greater than 5 characters!")
+      : (document.getElementById("passMessage").innerHTML = "");
   }
 
   return (
     <form className="form">
       <input type="text" placeholder="Username" />
+      <font id="passMessage" color="red"></font>
       <input onChange={checkPassword} type="password" placeholder="Password" />
       <input type="password" placeholder="Confirm Password" />
       <button type="submit">Register</button>
