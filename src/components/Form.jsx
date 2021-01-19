@@ -2,18 +2,19 @@ import React from "react";
 
 function Form() {
   function checkPassword(event) {
+    var passMessage = document.getElementById("passMessage");
     event.target.value.length <= 5
-      ? (document.getElementById("passMessage").innerHTML =
+      ? (passMessage.innerHTML =
           "Password needs to be greater than 5 characters!")
-      : (document.getElementById("passMessage").innerHTML = "");
+      : (passMessage.innerHTML = "");
   }
 
   function confirmPassword(event) {
     const pass = document.getElementById("originalPassword").value;
+    var passMessage = document.getElementById("passMessage");
     event.target.value !== pass
-      ? (document.getElementById("passMessage").innerHTML =
-          "Password not the same!")
-      : (document.getElementById("passMessage").innerHTML = "");
+      ? (passMessage.innerHTML = "Password not the same!")
+      : (passMessage.innerHTML = "");
   }
 
   return (
