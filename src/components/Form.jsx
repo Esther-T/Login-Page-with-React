@@ -23,6 +23,7 @@ function Form() {
       <font id="passMessage" color="red"></font>
       <input
         onChange={checkPassword}
+        name="password"
         id="originalPassword"
         type="password"
         placeholder="Password"
@@ -31,6 +32,7 @@ function Form() {
       <input
         type="password"
         id="confirmPassword"
+        name="confirmPassword"
         onChange={confirmPassword}
         placeholder="Confirm Password"
         required
