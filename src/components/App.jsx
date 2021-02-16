@@ -8,7 +8,6 @@ var userIsRegistered = false; // if user is registered
 
 function App() {
   const [currTime, newTime] = useState(new Date().toLocaleTimeString());
-  const [password, setpassword] = useState("");
 
   setInterval(getTime, 1000);
 

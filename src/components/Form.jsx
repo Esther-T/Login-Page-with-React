@@ -9,12 +9,8 @@ function Form() {
       : (passMessage.innerHTML = "");
   }
 
-  function confirmPassword(event) {
-    const pass = document.getElementById("originalPassword").value;
-    var passMessage = document.getElementById("passMessage");
-    event.target.value !== pass
-      ? (passMessage.innerHTML = "Password not the same!")
-      : (passMessage.innerHTML = "");
+  function confPassword(event) {
+    console.log(event.target.value);
   }
 
   return (
@@ -33,7 +29,7 @@ function Form() {
         type="password"
         id="confirmPassword"
         name="confirmPassword"
-        onChange={confirmPassword}
+        onChange={confPassword}
         placeholder="Confirm Password"
         required
       />
