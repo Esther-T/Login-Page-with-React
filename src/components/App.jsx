@@ -14,9 +14,11 @@ function App() {
   function getTime() {
     newTime(new Date().toLocaleTimeString());
   }
+
   return (
     <div className="container">
-      <h2>{currTime}</h2>
+      <h1>Welcome 😄</h1>
+      <h2>It is currently {currTime}</h2>
       {!userIsRegistered ? <Form /> : isLoggedIn ? <h1>Hello</h1> : <Login />}
     </div>
   );
